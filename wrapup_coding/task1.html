@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Create the button
+      const btn = document.createElement("button");
+      btn.textContent = "Toggle Background";
+      btn.style.padding = "10px 20px";
+      btn.style.fontSize = "16px";
+      document.body.appendChild(btn);
+
+      // Track current background state
+      let isBlue = false;
+
+      // Add event listener to toggle background color
+      btn.addEventListener("click", function () {
+        document.body.style.backgroundColor = isBlue ? "white" : "blue";
+        isBlue = !isBlue;
+      });
+    </script>
+  </body>
+</html>

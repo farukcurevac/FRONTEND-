@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Populate Dropdown</title>
+  </head>
+  <body>
+    <select id="myDropdown"></select>
+    <script>
+      function populateDropdown(dropdownId, optionsArray) {
+        const select = document.getElementById(dropdownId);
+        if (!select) return;
+        select.innerHTML = "";
+        optionsArray.forEach((optionText) => {
+          const option = document.createElement("option");
+          option.value = optionText;
+          option.textContent = optionText;
+          select.appendChild(option);
+        });
+      }
+
+      // Example usage:
+      populateDropdown("myDropdown", ["Apple", "Banana", "Cherry"]);
+    </script>
+  </body>
+</html>
