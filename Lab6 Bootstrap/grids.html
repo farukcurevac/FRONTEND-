@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Example</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Container with padding, borders, background, and text color -->
+    <div class="container p-5 my-4 border bg-light text-dark">
+      <h1 class="text-primary">Bootstrap Example</h1>
+      <p>
+        This example demonstrates Bootstrap’s grid system, table, and utility
+        classes.
+      </p>
+
+      <!-- Bootstrap Grid -->
+      <div class="row">
+        <div class="col-md-6 bg-info text-white p-3">
+          <h2>Left Column</h2>
+          <p>
+            This is the left column, styled with a background color and text
+            color.
+          </p>
+        </div>
+        <div class="col-md-6 bg-warning text-dark p-3">
+          <h2>Right Column</h2>
+          <p>
+            This is the right column, also styled with background and text
+            colors.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bootstrap Table -->
+      <div class="table-responsive mt-4">
+        <table class="table table-bordered">
+          <thead class="table-dark">
+            <tr>
+              <th>HTML Tag</th>
+              <th>Explanation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>&lt;meta&gt;</td>
+              <td>
+                Specifies the viewport settings, ensuring the webpage is
+                responsive.
+              </td>
+            </tr>
+            <tr>
+              <td>&lt;div class="container"&gt;</td>
+              <td>
+                Wraps content in a centered container with Bootstrap's default
+                padding and margins.
+              </td>
+            </tr>
+            <tr>
+              <td>&lt;h1 class="text-primary"&gt;</td>
+              <td>Creates a heading with Bootstrap's primary text color.</td>
+            </tr>
+            <tr>
+              <td>&lt;div class="row"&gt;</td>
+              <td>
+                Defines a row in the grid system to structure content in
+                columns.
+              </td>
+            </tr>
+            <tr>
+              <td>&lt;div class="col-md-6"&gt;</td>
+              <td>
+                Defines a column that spans 6 out of 12 columns on medium and
+                larger screens.
+              </td>
+            </tr>
+            <tr>
+              <td>&lt;table&gt;</td>
+              <td>Creates a table to display data in rows and columns.</td>
+            </tr>
+            <tr>
+              <td>&lt;thead class="table-dark"&gt;</td>
+              <td>
+                Defines the table header with a dark background and light text.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

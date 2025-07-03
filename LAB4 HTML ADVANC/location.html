@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV - Geolocation</title>
+    <style>
+      .location-section {
+        border-left: 2px solid #222;
+        padding-left: 18px;
+        margin: 40px 0 0 0;
+        max-width: 350px;
+      }
+      .location-title {
+        font-size: 1.6em;
+        font-weight: bold;
+        margin-bottom: 8px;
+        margin-top: 0;
+      }
+      .location-btn {
+        margin-bottom: 10px;
+        font-size: 1em;
+        padding: 3px 10px;
+        border-radius: 4px;
+        border: 1px solid #888;
+        background: #f6f6f6;
+        cursor: pointer;
+      }
+      .location-result {
+        margin-top: 10px;
+        font-size: 1.1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="location-section">
+      <div class="location-title">Your Location</div>
+      <button class="location-btn" id="getLocationBtn">Get My Location</button>
+      <div class="location-result" id="locationResult"></div>
+    </div>
+    <script>
+      const btn = document.getElementById("getLocationBtn");
+      const result = document.getElementById("locationResult");
+
+      btn.addEventListener("click", function () {
+        result.textContent = "";
+        if (!navigator.geolocation) {
+          result.textContent = "Geolocation is not supported by this browser.";
+          return;
+        }
+        navigator.geolocation.getCurrentPosition(
+          function (pos) {
+            const lat = pos.coords.latitude;
+            const lon = pos.coords.longitude;
+            result.innerHTML = `Latitude: ${lat}<br>Longitude: ${lon}`;
+          },
+          function (error) {
+            switch (error.code) {
+              case error.PERMISSION_DENIED:
+                result.textContent = "User denied the request for Geolocation.";
+                break;
+              case error.POSITION_UNAVAILABLE:
+                result.textContent = "Location information is unavailable.";
+                break;
+              case error.TIMEOUT:
+                result.textContent =
+                  "The request to get user location timed out.";
+                break;
+              default:
+                result.textContent = "An unknown error occurred.";
+            }
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

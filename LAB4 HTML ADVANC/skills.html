@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag and Drop Skills</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+      }
+      .skills-title {
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .skills-list,
+      .skills-drop-area {
+        width: 400px;
+        min-height: 40px;
+        margin-bottom: 20px;
+      }
+      .skills-list {
+        margin-bottom: 30px;
+      }
+      .skills-drop-area {
+        border: 2px dashed #bbb;
+        border-radius: 6px;
+        padding: 18px 10px 18px 10px;
+
+        min-height: 100px;
+        position: relative;
+      }
+
+      .skill-item {
+        background: #f1f1f1;
+        margin-bottom: 10px;
+        padding: 12px 18px;
+        border-radius: 4px;
+        font-size: 1.1em;
+        cursor: grab;
+        border: 1px solid #e0e0e0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="skills-title">Drag and Drop Skills</div>
+    <div class="skills-list" id="skillsList">
+      <div class="skill-item" draggable="true" id="skill-html">HTML</div>
+    </div>
+    <div class="skills-drop-area" id="skillsDropArea">
+      <span class="drop-placeholder" id="dropPlaceholder"
+        >Drop skills here</span
+      >
+      <div class="skill-item" draggable="true" id="skill-css">CSS</div>
+    </div>
+    <script>
+      // Drag and drop logic
+      let draggedItem = null;
+
+      document.querySelectorAll(".skill-item").forEach((item) => {
+        item.addEventListener("dragstart", function () {
+          draggedItem = item;
+          setTimeout(() => item.classList.add("dragging"), 0);
+        });
+        item.addEventListener("dragend", function () {
+          draggedItem = null;
+          item.classList.remove("dragging");
+        });
+      });
+
+      // Drop area logic
+      const dropArea = document.getElementById("skillsDropArea");
+      const dropPlaceholder = document.getElementById("dropPlaceholder");
+
+      dropArea.addEventListener("dragover", function (e) {
+        e.preventDefault();
+      });
+
+      dropArea.addEventListener("drop", function (e) {
+        e.preventDefault();
+        if (draggedItem && dropArea !== draggedItem.parentNode) {
+          dropArea.appendChild(draggedItem);
+          updatePlaceholder();
+        }
+      });
+
+      // Also allow dragging back to the skills list
+      const skillsList = document.getElementById("skillsList");
+      skillsList.addEventListener("dragover", function (e) {
+        e.preventDefault();
+      });
+      skillsList.addEventListener("drop", function (e) {
+        e.preventDefault();
+        if (draggedItem && skillsList !== draggedItem.parentNode) {
+          skillsList.appendChild(draggedItem);
+          updatePlaceholder();
+        }
+      });
+
+      function updatePlaceholder() {
+        // Show placeholder only if drop area has no skill items
+        const hasSkill = Array.from(dropArea.children).some(
+          (el) => el.classList && el.classList.contains("skill-item")
+        );
+        dropPlaceholder.style.display = hasSkill ? "none" : "block";
+      }
+
+      // Initial placeholder state
+      updatePlaceholder();
+    </script>
+  </body>
+</html>

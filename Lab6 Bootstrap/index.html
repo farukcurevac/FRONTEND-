@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Creator Tool</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .navbar-custom {
+        background-color: #1976d2;
+      }
+      .navbar-custom .navbar-brand,
+      .navbar-custom .nav-link,
+      .navbar-custom .navbar-nav .nav-link.active {
+        color: #fff !important;
+      }
+      .about-green {
+        color: #1a7f1a !important;
+      }
+      .footer {
+        background: #f1f3f6;
+        color: #555;
+        padding: 18px 0 8px 0;
+        text-align: center;
+        margin-top: 40px;
+        border-top: 1px solid #e5e7eb;
+      }
+      .btn-notification {
+        margin-left: 8px;
+      }
+      .vertical-btn-group .btn {
+        margin-bottom: 8px;
+      }
+      .vertical-btn-group .btn:last-child {
+        margin-bottom: 0;
+      }
+      .section {
+        padding-top: 60px;
+        margin-bottom: 40px;
+      }
+      .card-title {
+        font-size: 1.1em;
+        font-weight: 600;
+      }
+      .map-responsive {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+      }
+      .map-responsive iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        border: 0;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="index.html">CV Creator Tool</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#locations">Locations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">FAQ</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <a href="signin.html" class="btn btn-outline-primary btn-sm me-2"
+              >Sign In</a
+            >
+            <a href="register.html" class="btn btn-primary btn-sm me-2"
+              >Register</a
+            >
+            <button
+              type="button"
+              class="btn btn-success btn-sm btn-notification"
+              data-bs-toggle="modal"
+              data-bs-target="#notificationsModal"
+            >
+              Notifications
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container section" id="home">
+      <div class="text-center mt-4">
+        <h2 class="fw-bold">Welcome to CV Creator Tool</h2>
+        <p class="fs-5">
+          Create, Customize, and Download Professional CVs in Minutes
+        </p>
+        <hr />
+        <button class="btn btn-success mb-4">Create Your CV Now!</button>
+      </div>
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-3 mb-3">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <div class="card-title">AI Plagiarism Checker</div>
+              <p class="card-text">
+                Ensure originality with AI-powered plagiarism checks.
+              </p>
+              <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <div class="card-title">Top 10 Interview Questions</div>
+              <p class="card-text">
+                Prepare confidently with curated interview questions.
+              </p>
+              <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <div class="card-title">Template Library</div>
+              <p class="card-text">
+                Choose from a wide variety of CV templates.
+              </p>
+              <a href="#" class="btn btn-primary btn-sm">Explore Templates</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mb-4">
+        <h5 class="about-green fw-bold">About CV Creator Tool</h5>
+        <p class="about-green">
+          CV Creator Tool is your go-to platform for building professional
+          resumes. With a wide range of customizable templates, AI powered
+          tools, and expert resources, we help you stand out in the job market.
+          Get ready to create a stunning CV that highlights your skills and
+          achievements effortlessly.
+        </p>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+
+    <!-- Locations Section -->
+    <div class="container section" id="locations">
+      <h3 class="fw-bold mb-3">Locations</h3>
+      <div class="map-responsive mb-4">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.858858929624!2d18.41307631549613!3d43.85625897911516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758cbbf8e6b9b2d%3A0x4b6e2e0e9e7e6b6e!2sSarajevo%2C%20Bosnia%20and%20Herzegovina!5e0!3m2!1sen!2sba!4v1680000000000!5m2!1sen!2sba"
+          width="100%"
+          height="350"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="container section" id="faq">
+      <h3 class="fw-bold mb-3">Frequently Asked Questions</h3>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqOneHeading">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faqOne"
+              aria-expanded="true"
+              aria-controls="faqOne"
+            >
+              How do I create a CV?
+            </button>
+          </h2>
+          <div
+            id="faqOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="faqOneHeading"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Click on "Create Your CV Now!" and follow the guided steps to
+              build your CV.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqTwoHeading">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faqTwo"
+              aria-expanded="false"
+              aria-controls="faqTwo"
+            >
+              Can I download my CV as PDF?
+            </button>
+          </h2>
+          <div
+            id="faqTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="faqTwoHeading"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Yes, you can export your CV as PDF or Word document.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqThreeHeading">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faqThree"
+              aria-expanded="false"
+              aria-controls="faqThree"
+            >
+              Is my data secure?
+            </button>
+          </h2>
+          <div
+            id="faqThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="faqThreeHeading"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Absolutely! We use industry-standard security to keep your data
+              safe and private.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notifications Modal -->
+    <div
+      class="modal fade"
+      id="notificationsModal"
+      tabindex="-1"
+      aria-labelledby="notificationsModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="notificationsModalLabel">
+              Notifications
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <ul class="list-group">
+              <li class="list-group-item">Welcome to CV Creator Tool!</li>
+              <li class="list-group-item">New templates have been added.</li>
+              <li class="list-group-item">
+                Check out our AI-powered features!
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">&copy; 2024 CV Creator Tool. All rights reserved.</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Navbar scroll to section
+      document.querySelectorAll('.nav-link[href^="#"]').forEach((link) => {
+        link.addEventListener("click", function (e) {
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            e.preventDefault();
+            window.scrollTo({
+              top: target.offsetTop - 60,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

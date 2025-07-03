@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Data Entry Form</title>
+    <style>
+      .center {
+        text-align: center;
+        margin-top: 60px;
+      }
+      form {
+        display: inline-block;
+        text-align: left;
+      }
+      label {
+        display: inline-block;
+        width: 110px;
+        font-size: 1.2em;
+      }
+      input[type="text"] {
+        width: 250px;
+        font-size: 1.1em;
+        margin-bottom: 10px;
+      }
+      .form-title {
+        font-size: 2.5em;
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+      .result {
+        margin-top: 30px;
+        font-size: 1.2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <div class="form-title">CV Data Entry Form</div>
+      <form id="cvForm" autocomplete="off">
+        <div>
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" required />
+        </div>
+        <div>
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" required />
+        </div>
+        <div>
+          <label for="jobTitle">Job Title:</label>
+          <input type="text" id="jobTitle" required />
+        </div>
+        <div style="margin-top: 10px">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+      <div class="result" id="result"></div>
+    </div>
+    <script>
+      const form = document.getElementById("cvForm");
+      const result = document.getElementById("result");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const firstName = document.getElementById("firstName").value.trim();
+        const lastName = document.getElementById("lastName").value.trim();
+        const jobTitle = document.getElementById("jobTitle").value.trim();
+
+        // Save to localStorage
+        localStorage.setItem("firstName", firstName);
+        localStorage.setItem("lastName", lastName);
+        localStorage.setItem("jobTitle", jobTitle); // <-- Add this line
+
+        // Show message
+        result.textContent = `Hello, ${firstName} ${lastName}, ${jobTitle}!`;
+
+        // Clear fields
+        form.reset();
+      });
+    </script>
+  </body>
+</html>

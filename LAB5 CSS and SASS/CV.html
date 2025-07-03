@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faruk Curevac - CV</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f6f8fb;
+      }
+      .container {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+        background: none;
+        min-height: 100vh;
+      }
+      .sidebar {
+        background: #374151;
+        color: #fff;
+        width: 40px;
+        min-width: 300px;
+        padding: 38px 32px 32px 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: 100vh;
+      }
+      .avatar {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        background: #fff;
+        margin: 0 auto 30px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3.5em;
+        color: #374151;
+        font-weight: bold;
+        overflow: hidden;
+      }
+      .sidebar h3 {
+        margin: 28px 0 10px 0;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        border-bottom: 1px solid #4b5563;
+        padding-bottom: 4px;
+        width: 100%;
+        font-weight: 600;
+      }
+      .sidebar p,
+      .sidebar li {
+        font-size: 1em;
+        margin: 6px 0;
+        color: #e5e7eb;
+      }
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 18px 0;
+      }
+      .sidebar .contact-info {
+        margin-bottom: 18px;
+        width: 100%;
+      }
+      .sidebar .contact-info p {
+        margin: 4px 0;
+        color: #e5e7eb;
+        font-size: 1em;
+      }
+      .sidebar .contact-info b,
+      .sidebar .contact-info strong {
+        color: #fff;
+      }
+      .sidebar .education {
+        margin-bottom: 18px;
+        width: 100%;
+      }
+      .sidebar .education li {
+        font-size: 0.98em;
+        margin-bottom: 6px;
+        color: #e5e7eb;
+      }
+      .sidebar .skills {
+        width: 100%;
+      }
+      .sidebar .skills-list {
+        margin-bottom: 0;
+        margin-top: 8px;
+      }
+      .sidebar .skills-list li {
+        background: none;
+        border-radius: 0;
+        padding: 0 0 0 12px;
+        margin-bottom: 6px;
+        font-size: 0.98em;
+        color: #e5e7eb;
+        position: relative;
+      }
+      .sidebar .skills-list li:before {
+        content: "•";
+        color: #60a5fa;
+        position: absolute;
+        left: 0;
+      }
+      .sidebar .section-title {
+        margin-top: 24px;
+        margin-bottom: 10px;
+        font-size: 1.1em;
+        font-weight: 600;
+        border-bottom: 1px solid #4b5563;
+        padding-bottom: 4px;
+        width: 100%;
+      }
+      .main-content {
+        flex: 1;
+        padding: 48px 48px 32px 48px;
+        background: #fff;
+        min-height: 100vh;
+      }
+      .main-content h1 {
+        margin-top: 0;
+        font-size: 2.2em;
+        font-weight: bold;
+        color: #374151;
+        margin-bottom: 0;
+      }
+      .main-content .subtitle {
+        color: #6b7280;
+        font-size: 1.2em;
+        margin-bottom: 30px;
+        margin-top: 4px;
+        font-weight: 400;
+      }
+      .main-content h2 {
+        font-size: 1.18em;
+        color: #222;
+        margin-top: 32px;
+        margin-bottom: 8px;
+        border-bottom: 1px solid #e5e7eb;
+        padding-bottom: 2px;
+        font-weight: 700;
+      }
+      .main-content p {
+        color: #444;
+        font-size: 1.08em;
+        margin-top: 0;
+        margin-bottom: 18px;
+      }
+      .main-content ul {
+        margin: 0 0 0 18px;
+        padding: 0;
+      }
+      .main-content li {
+        margin-bottom: 5px;
+        font-size: 1em;
+      }
+      .main-content strong {
+        color: #222;
+      }
+      .main-content .project-title {
+        font-weight: bold;
+        font-size: 1.08em;
+        color: #222;
+      }
+      .main-content .project-date {
+        font-style: italic;
+        font-size: 0.98em;
+        color: #374151;
+        margin-bottom: 2px;
+        display: block;
+      }
+      .main-content .section-divider {
+        border: none;
+        border-top: 1px solid #e5e7eb;
+        margin: 18px 0;
+      }
+      .main-content a {
+        color: #2563eb;
+        text-decoration: underline;
+      }
+
+      @media (max-width: 1000px) {
+        .container {
+          flex-direction: column;
+        }
+        .sidebar {
+          width: 100%;
+          min-width: 0;
+          border-radius: 0;
+          min-height: 0;
+        }
+        .main-content {
+          padding: 30px 12px;
+        }
+      }
+      @media (max-width: 700px) {
+        .container {
+          flex-direction: column;
+        }
+        .sidebar {
+          width: 100%;
+          min-width: 0;
+          padding: 24px 8px;
+        }
+        .main-content {
+          padding: 18px 4px;
+        }
+      }
+    </style>
+  </head>
+  <br />
+  <br />
+  <br />
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="avatar">
+          <!-- You can use an <img> here if you have a profile picture -->
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+            alt="Avatar"
+            style="width: 100%; height: 100%; border-radius: 50%"
+          />
+        </div>
+        <div class="contact-info">
+          <h3>Contact</h3>
+          <p><b>Phone:</b> 123-456-7890</p>
+          <p><b>Email:</b> farukcurevac@example.com</p>
+          <p><b>Location:</b> Sarajevo, Bosnia and Herzegovina</p>
+        </div>
+        <div class="education">
+          <h3>Education</h3>
+          <ul>
+            <li>
+              Bachelor's Degree in Computer Science - University of Sarajevo
+            </li>
+            <li>Certified JavaScript Developer - FreeCodeCamp</li>
+            <li>Responsive Web Design Certification - Coursera</li>
+          </ul>
+        </div>
+        <div class="skills">
+          <h3>Skills</h3>
+          <ul class="skills-list">
+            <li>HTML5, CSS3, JavaScript</li>
+            <li>React, Redux, Node.js</li>
+            <li>RESTful APIs, Express</li>
+            <li>Version Control (Git, GitHub)</li>
+            <li>Web Performance Optimization</li>
+          </ul>
+        </div>
+      </aside>
+      <section class="main-content">
+        <h1>Faruk Curevac</h1>
+        <div class="subtitle">Web Developer</div>
+        <h2>Introduction</h2>
+        <p>
+          Hello, my name is <strong>Faruk Curevac</strong>. I am a
+          <em>passionate</em> Web developer with over <u>five years</u> of
+          experience in building modern web applications...
+        </p>
+        <hr class="section-divider" />
+        <h2>Experience</h2>
+        <p>
+          <b>Web Developer</b> at
+          <span style="color: #2563eb">XYZ Corp</span> (2018 - Present)<br />
+          <b>Frontend Developer</b> at
+          <span style="color: #2563eb">ABC Ltd</span> (2016 - 2018)<br />
+          <b>Freelance Web Designer</b> (2015 - 2016)
+        </p>
+        <hr class="section-divider" />
+        <h2>Projects</h2>
+        <div>
+          <span class="project-title"
+            >Social Media Campaign for Product Launch</span
+          ><br />
+          <span class="project-date">Date: March 2021</span>
+          <p>
+            Developed and executed a social media campaign to promote the launch
+            of a new product, resulting in 100,000 impressions and 5,000 new
+            followers within the first month.
+          </p>
+        </div>
+        <div>
+          <span class="project-title">Content Strategy Overhaul</span><br />
+          <span class="project-date">Date: 2020</span>
+          <p>
+            Worked with a cross-functional team to redesign the company's blog
+            strategy, aligning with SEO goals and doubling monthly site traffic.
+          </p>
+        </div>
+        <hr class="section-divider" />
+        <h2>Hobbies</h2>
+        <p>
+          <b>Photography:</b> Specializes in landscape and portrait photography;
+          has showcased work in local galleries.<br />
+          <b>Travel:</b> Experienced traveler, having visited over 20 countries,
+          which has broadened cultural understanding and adaptability.<br />
+          <b>Volunteering:</b> Regular volunteer at the local animal shelter,
+          assisting with care and adoption events.
+        </p>
+        <hr class="section-divider" />
+        <h2>About</h2>
+        <p>Visit my <a href="#">GitHub profile</a> for more projects.</p>
+      </section>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <script>
+      const skillsDropArea = document.getElementById("skillsDropArea");
+      let draggedItem = null;
+
+      // Add drag event listeners to all skill items
+      document.querySelectorAll(".skill-item").forEach((item) => {
+        item.addEventListener("dragstart", function (e) {
+          draggedItem = item;
+          setTimeout(() => item.classList.add("dragging"), 0);
+        });
+        item.addEventListener("dragend", function () {
+          draggedItem = null;
+          item.classList.remove("dragging");
+        });
+      });
+
+      // Allow drop on the drop area
+      skillsDropArea.addEventListener("dragover", function (e) {
+        e.preventDefault();
+      });
+
+      // Handle drop event
+      skillsDropArea.addEventListener("drop", function (e) {
+        e.preventDefault();
+        if (!draggedItem) return;
+
+        // Find the element under the cursor
+        const afterElement = getDragAfterElement(skillsDropArea, e.clientY);
+        if (afterElement == null) {
+          skillsDropArea.appendChild(draggedItem);
+        } else {
+          skillsDropArea.insertBefore(draggedItem, afterElement);
+        }
+      });
+
+      // Helper to find the element after which to insert
+      function getDragAfterElement(container, y) {
+        const draggableElements = [
+          ...container.querySelectorAll(".skill-item:not(.dragging)"),
+        ];
+        return draggableElements.reduce(
+          (closest, child) => {
+            const box = child.getBoundingClientRect();
+            const offset = y - box.top - box.height / 2;
+            if (offset < 0 && offset > closest.offset) {
+              return { offset: offset, element: child };
+            } else {
+              return closest;
+            }
+          },
+          { offset: -Infinity }
+        ).element;
+      }
+    </script>
+  </body>
+</html>
